@@ -40,7 +40,7 @@ const TodoList = () => {
   return (
     <div className="flex flex-col">
       {errorMessage !== '' && <div>{errorMessage}</div>}
-      {isLoaded ? slicedTodos : <div>Loading...</div>}
+      {isLoaded && errorMessage === '' ? slicedTodos : <div>Loading...</div>}
     </div>
   );
 };
